@@ -1,0 +1,16 @@
+h1, h2, h3, h4, nav li {
+  font-family: 'Kiwi Maru', serif;
+  color: #01bbd4;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul li a{
+  padding-left:20px;
+
+}
+span{
+  color:#01bbd4;
+}

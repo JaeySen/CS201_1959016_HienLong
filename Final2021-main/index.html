@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light" style="height:200vh">
+  <!-- This is the CS201 Web Dev 1 final. Your task is to make a responsive e-commerce site using
+  BS4 as your CSS front end framework and load products from the FakeStore API (linked below) -->
+  <!-- FakeStoreAPI end point: https://fakestoreapi.com/products -->
+  <header>
+    <div class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <div class="col-2 d-flex">
+          <div class="dropdown" id="currency">
+            <button class="btn btn-secondary btn-small dropdown-toggle"
+           type="button" id="dropdownMenu1" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+            Currency: USD
+          </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <a class="dropdown-item" href="#!">Action</a>
+              <a class="dropdown-item" href="#!">Another action</a>
+            </div>
+          </div>
+
+          <div class="dropdown" id="language">
+            <button class="btn btn-secondary dropdown-toggle"
+               type="button" id="dropdownMenu1" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              English
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <a class="dropdown-item" href="#!">Action</a>
+              <a class="dropdown-item" href="#!">Another action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+      <div class="navbar-brand col-2">
+
+      </div>
+      <div class="main-nav d-flex justify-content-end col-8">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#">Women's</a>
+            <a href="#">Men's</a>
+            <a href="#">Unisex's</a>
+            <a href="#">Collection</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=social" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+
+  <div class="container pt-5">
+    <div class="row" id="store">
+      <!-- <div class="col">
+
+      </div>
+      <div class="col">
+
+      </div>
+      <div class="col">
+
+      </div> -->
+    </div>
+
+  <div class="container pt-5">
+    <div id="carouselStore" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox" id="listbox">
+        <div class="carousel-item active">
+          <div class="container d-flex row">
+            <!-- <div class="card w-25">
+              <img class="card-img-top" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="First slide">
+              <div class="card-body"> Some more card content </div>
+            </div>
+            <div class="card w-25">
+              <img class="card-img-top" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="First slide">
+              <div class="card-body"> Some more card content </div>
+            </div>
+            <div class="card w-25">
+              <img class="card-img-top" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="First slide">
+              <div class="card-body"> Some more card content </div>
+            </div>
+            <div class="card w-25">
+              <img class="card-img-top" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="First slide">
+              <div class="card-body"> Some more card content </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-25" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-25" src="images/examplebanner.jpg" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+        </div>
+      </div> -->
+      <a class="carousel-control-prev" href="#carouselStore" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselStore" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <div class="container pt-5 d-flex justify-content-center">
+    <h4 class="display-5">Information</h4>
+  </div>
+
+  <div class="container-fluid pt-5 d-flex">
+    <div class="col" style="background: #01bbd4">
+      <i class="fas fa-truck"></i>
+      <h4 class="text-white">Fast and Free delivery</h4>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+    </div>
+    <div class="col" style="background: #01bbd4">
+      <i class="fas fa-exchange-alt"></i>
+      <h4 class="text-white">Fast and Free delivery</h4>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="col" style="background: #01bbd4">
+      <i class="fas fa-wallet"></i>
+      <h4 class="text-white">Fast and Free delivery</h4>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+
+  <div class="container d-flex pt-5 justify-content-center">
+    <h4 class="display-5">Information</h4>
+  </div>
+
+  <div class="container pt-5 d-flex">
+    <div class="col px-0">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.42S7psrLQRNFtOj5ksD3gQAAAA&pid=Api" class="img-fluid" alt="Responsive image">
+
+    </div>
+
+    <div class="col">
+      <h4 class="display-5">Time Spent Well</h4>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a class="btn btn-primary" href="#" role="button">Learn More</a>
+    </div>
+
+    <div class="col">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.42S7psrLQRNFtOj5ksD3gQAAAA&pid=Api" class="img-fluid" alt="Responsive image">
+
+    </div>
+
+    <div class="col">
+      <h4 class="display-5">Time Spent Well</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a class="btn btn-primary" href="#" role="button">Learn More</a>
+    </div>
+
+  </div>
+
+  <div class="container pt- 5d-flex justify-content-center">
+    <h4 class="display-5">Information</h4>
+  </div>
+
+  <footer class="bg-white pt-5" style="height:50vh">
+    <div class="container d-flex">
+      <div class="row">
+        <div class="col">
+          <div class="row d-inline-block">
+            <h4 class="display-5">Information</h4>
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <h4 class="display-5">Information</h4>
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <h4 class="display-5">Information</h4>
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+          <div class="row">
+            ahsdfjkhjk
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <h4 class="display-5">Information</h4>
+          </div>
+          <div class="row">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="row">
+            <h4 class="display-5">Information</h4>
+          </div>
+          <div class="row">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>My Company, 4578 Marmora Road, Glasglow D04 89GR</p>
+          </div>
+          <div class="row">
+            <i class="fas fa-phone-square"></i>
+            <p>Call us now: 0123-456-789</p>
+          </div>
+          <div class="row">
+            <i class="fas fa-envelope"></i>
+            <p>Email: smokeweed@weedmail.com</p>
+          </div>
+
+        </div>
+
+        <div class="col">
+          <h4 class="display-5">Information</h4>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container" style="border-top:grey">
+
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="staticcatalog.js" charset="utf-8"></script>
+</body>
+</html>
